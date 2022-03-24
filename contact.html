@@ -82,6 +82,7 @@
         color: #565656;
         text-align: left;
         padding-left: 2%;
+        text-decoration: underline #72dbf5;
       }
 
       hr {
@@ -112,11 +113,11 @@
         color: #76323f;
       }
 
-      h4 {
+      /* h4 {
         margin-left: 25%;
         text-align: left;
         margin-right: 25%;
-      }
+      } */
       p {
         text-align: center;
         margin-left: 25%;
@@ -127,6 +128,20 @@
         margin-right: auto;
         display: block;
       }
+      form{
+        width: 800px;
+        margin-right: auto;
+        margin-left: auto;
+        background-color: whitesmoke;
+        padding: auto;
+        margin: auto;
+      }
+    
+      fieldset{
+        border-color: lightgrey;
+        width: auto;
+      }
+
     </style>
   </head>
   <body>
@@ -149,10 +164,80 @@
     <br />
 
     <div id="pos">
-      <h1>Architectural's Best</h1>
+      <h1 >Architectural's Best<a id="#contact_form"></a></h1>
       <br />
-      <hr />
+      <!-- <hr /> -->
     </div>
+
+    <h2 class="font_type">Contact Information</h2>
+    <form method="post" action="https://oim-apis.herokuapp.com/form">
+    <fieldset>
+      <legend><h4>Your Information:</h4></legend>
+      <label for="name">Name: </label>
+      <input
+        type="text"
+        id="name"
+        name="name"
+        maxlength="100"
+        placeholder="Enter your name here"
+      />
+      <br>
+      <br>
+      <label for="email"> Email: </label>
+        <input type="email"
+        id="email"
+        name="email"
+        maxlength="100"
+        placeholder="Enter your email here" />
+      <br>
+      <br>
+    </fieldset>
+    <fieldset>
+        <legend> <h4>Your Review:</h4></legend>
+        <label for="apple-product">Which site did you like most?</label>
+        <select name="site" id="best-site">
+            <option value="Home">Home</option>
+            <option value="Architecture">Architecture</option>
+            <option value="Epoches">Epoches</option>
+            <option value="Personal_Selection">Personal Selection</option>
+
+        </select>
+        <br>
+        <br>
+        <div>
+            What do you think of the overall website?
+            <br>
+            <span>
+                <input type="radio" name="product_feedback" value="Great">
+                <label>Great</label>
+                <input type="radio" name="product_feedback" value="Awesome">
+                <label>Awesome</label>
+                <input type="radio" name="product_feedback" value="Good">
+                <label>Good</label>
+                <input type="radio" name="product_feedback" value="Good">
+                <label>Not Good</label>
+
+            </span>
+            <br>
+        </div>
+        <br>
+        <div>
+            <div>
+                <label for="comments">Comments:</label>
+            </div>
+            <div>
+                <textarea name="comments" id="comments" cols="55" rows="3"></textarea>
+            </div>
+        </div>
+        <br>
+        <div>
+            <input type="checkbox" id="updates" name="updates" value="updates" checked/>
+            <label for="updates">Sign me up for email updates</label>
+        </div>
+        <br>
+        <input type="submit" value="Submit">
+        <input type="Reset" value="Reset">
+    </form>
 
     <script>
       function toggleSidebar() {
