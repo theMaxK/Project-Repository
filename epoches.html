@@ -5,7 +5,52 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+
     <style>
+      * {
+        margin: 0px;
+        padding: 0px;
+        font-family: sans-serif;
+      }
+
+      #pos {
+        text-align: center;
+      }
+
+      #sidebar {
+        position: fixed;
+        width: 200px;
+        height: 100%;
+        background: #151719;
+        right: -200px;
+        transition: all 500ms linear;
+        cursor: pointer;
+      }
+
+      #sidebar.active {
+        right: 0px;
+      }
+
+      #sidebar ul li {
+        color: rgba(230, 230, 230, 0.9);
+        list-style-type: none;
+        padding: 15px 10px;
+        border-bottom: 1px solid rgba(100, 100, 100, 0.3);
+      }
+
+      #sidebar .toggle-btn {
+        position: absolute;
+        right: 230px;
+        top: 20px;
+      }
+      #sidebar .toggle-btn span {
+        display: block;
+        width: 30px;
+        height: 5px;
+        background: #565656;
+        margin: 3px;
+      }
+
       .navigation {
         list-style-type: none;
         margin: 0;
@@ -13,43 +58,225 @@
         overflow: hidden;
         background: #333;
       }
-      .list {
-        float: left;
-        border-right: 1px solid #bbb;
-      }
 
       li a {
         display: block;
         color: white;
         text-align: center;
-        padding: 14px 16px;
+        padding: 14px;
         /* background-color: grey; */
         text-decoration: none;
       }
-
-      li a:hover:not(.active) {
-        background-color: #111;
+      li:hover:not(.active) {
+        background-color: rgba(95, 93, 93, 0.61);
       }
 
       .active {
-        background-color: #04aa6d;
+        background-color: #015828;
       }
+      body {
+        background-color: #efefef;
+      }
+
+      h1 {
+        color: #565656;
+        text-align: left;
+        padding-left: 2%;
+        text-decoration: underline #72dbf5;
+      }
+
+      hr {
+        background-color: #72dbf5;
+        height: 3px;
+        border: none;
+      }
+
+      h2 {
+        text-align: center;
+        color: #565656;
+      }
+
+      h5 {
+        margin: 1%;
+        float: left;
+        color: #565656;
+      }
+      h6 {
+        margin: 1%;
+        float: right;
+        color: #565656;
+      }
+
+      h2 {
+        float: center;
+        color: #565656;
+        color: #76323f;
+      }
+
+      h4 {
+        margin-left: 25%;
+        text-align: left;
+        margin-right: 25%;
+      }
+      p {
+        text-align: center;
+        margin-left: 25%;
+        margin-right: 25%;
+      }
+      img {
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+      }
+
+      table {
+        width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+        font-family: Arial, Helvetica, sans-serif;
+        /* background-color: antiquewhite; */
+        border-collapse: collapse;
+        text-align: center;
+        
+       }
+
+      tr,
+      td {
+        border: 1px solid #76323f;
+        padding: 3px;
+        vertical-align: middle;
+        text-align: center;
+      }
+
     </style>
   </head>
   <body>
-    <ul class="navigation">
-      <li class="list"><a href="proposal.html">Home</a></li>
-      <li class="list"><a href="history.html">History</a></li>
-      <li class="list">
-        <a class="active" href="epoches.html">Architectural Epoches</a>
-      </li>
-      <li class="list">
-        <a href="german_real-estate.html">German Real Estate Market</a>
-      </li>
-      <li class="list">
-        <a href="us_real-estate.html">US Real Estate Market</a>
-      </li>
-      <li class="list"><a href="favorites.html">Favorite Estates</a></li>
-    </ul>
+    <div id="sidebar">
+      <div class="toggle-btn" onclick="toggleSidebar()">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="architecture.html">Architecture</a></li>
+        <li><a class="active" href="epoches.html">Epoches</a></li>
+        <li><a href="favorites.html">Personal Selection</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="sitemap.html">Sitemap</a></li>
+      </ul>
+    </div>
+
+    <br />
+
+    <div id="pos">
+      <h1>Architectural's Best</h1>
+      <br />
+      <!-- <hr /> -->
+    </div>
+    <br><br>
+    <h2>Architectural Epoches</h2>
+    <br>
+
+    <table>
+      <tr>
+        <th>Name</th>
+        <th>Time</th>
+        <th>Description</th>
+        <th>Example</th>
+      </tr>
+      <tr>
+        <td>Classic Architecture</td>
+        <td>7th - 4th century BC</td>
+        <td>Refers to the style, predominantly used 
+          in ancient Greece and Rome. Classic Architecture is known for it's 
+          symmetry, order, proportion and perspective. Usage of materials such as marble, concrete and broken 
+          pediments were considered extremely desirable. The most remarkable building ever been built is the Parthenon, a Greek temple in Athena. 
+        </td>
+        <td>
+          <img src="images/Parthenon.jpg" alt="Parthenon, Greece" title="Parthenon, Greece", height="200">
+        </td>
+      </tr>
+      <tr>
+        <td>Romanesque Architecture</td>
+        <td>1050 AD to 1170 AD</td>
+        <td>Refers to an architectural style of Medieval Europe, 
+          characterized by thick, heavy piers, narrow windows, staigned glass, semi circular arches and towers. 
+          This style of architecture is significant for its unprecedented massive scale and the 
+          introduction of vaulted roofs designed to replace fire prone wood roofs.  
+          Some of the notable examples of Romanesque Architecture are Santiago De Compostela Cathedral in Spain,  St. Michael’s Church, Hildesheim, and Basilica of St. Sernin in Toulouse, France. 
+
+        </td>
+        <td>
+          <img src="images/stserninbasilica.jpg" alt="Basilica of St. Sernin, France" title="Basilica of St. Sernin, France", height="200">
+        </td>
+      </tr>
+      <tr>
+        <td>Gothic Architecture</td>
+        <td>1100 AD to 1450 AD</td>
+        <td>Gothic Architecture, formerly named Opus Francigenum was discovered
+          in the late middle ages in France. 
+          The style was influenced by Romanesque and was distinguished by its flying buttresses and pointed arches that allowed
+          for the high vaulted ceilings that Gothic Architecture is 
+          known for. One of the most famous examples is the Notre Dame in Paris, France.  
+        </td>
+        <td>
+          <img src="images/NotreDame.jpg" alt="Notre Dame, Paris" title="Notre Dame, Paris", height="200">
+        </td>
+      </tr>
+      <tr>
+        <td>Renaissance Architecture</td>
+        <td>1400 AD to 1600 AD</td>
+        <td>Renaissance emerged in the early 15th century in Italy, France, & England taking the inspirations from Greek and Roman ideals. 
+          This style is characterized for its perfection, focusing on symmetry, geometry, proportion, orderly arrangement of columns, formal landscaped gardens, use of arched openings,  hemispherical domes, vaulted ceilings, and stone flooring. 
+          The architect known to be the father of the Renaissance is Filippo Brunelleschi with the astonishing  Florence Cathedral. 
+        </td>
+        <td>
+          <img src="images/cathedralFlorence.jpg" alt="Cathedral, Florence" title="Cathedral, Florence", height="200">
+        </td>
+      </tr>
+      <tr>
+        <td>Baroque Architecture</td>
+        <td>1600 AD to 1755 AD</td>
+        <td>Baroque Architecture took a more dramatic approach to Renaissance Architecture, driven by playfulness rather than rationalism. 
+          This style of architecture portrays irregular shapes, exaggerated ornamentation, opulent paintings, and bold contrasts. 
+          The most remarkable example of the Baroque style is the Palace of Versailles in France. 
+        </td>
+        <td>
+          <img src="images/versailles-880359_1280.jpg" alt="Versailles, France" title="Versailles, France", height="200">
+        </td>
+      </tr>
+      <tr>
+        <td>NeoClassical Architecture</td>
+        <td>1750 AD to 1920 AD</td>
+        <td>Neoclassical Architecture is the rediscovery of Classical Greek and Roman Architecture that flourished in the 18th and 19th centuries.
+          Symmetry, elegant lines, uncluttered appearance, triangular pediments, free-standing columns, balustraded balconies, pronounced cornices, and grand-scale building distinguished this unique style of architecture.
+          The White House in Washington, and Belvedere Palace, Vienna are some of the well-known examples of Neoclassical architecture. 
+        </td>
+        <td>
+          <img src="images/Belvedere.jpg" alt="Belvedere, Vienna" title="Belvedere, Vienna", height="180">
+        </td>
+      </tr>
+      <tr>
+        <td>Art-Deco Style</td>
+        <td>1925</td>
+        <td>Art-deco style is a part of the Art-deco movement that emerged in the 1920s and 30’s promoting the industrial arts, which spread quickly throughout Europe and U.S. 
+          The movement represents social and technological progress combined with the use of luxurious materials, patterns, handcrafted elements, and icons with modern technology and design. 
+          Art-Deco buildings utilize opulent materials like stucco, decorative glass, steel, terracotta, aluminum, and ceramics. 
+          This revolutionary era created iconic skyscrapers like the Chrysler Building and the Empire State Building.
+        </td>
+        <td>
+          <img src="images/EmpireStateBuilding.jpg" alt="Empire State Building, New York" title="Empire State Building, New York", height="200">
+        </td>
+      </tr>
+    </table>
+
+    <br><br><br><br>
+
+    <script>
+      function toggleSidebar() {
+        document.getElementById("sidebar").classList.toggle("active");
+      }
+    </script>
   </body>
 </html>

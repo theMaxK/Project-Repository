@@ -1,53 +1,115 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+
     <style>
-      .navigation {
+        *{
+            margin: 0px;
+            padding: 0px;
+            font-family: sans-serif;
+
+        }
+        #sidebar{
+            position: fixed; 
+            width: 200px;
+            height: 100%;
+            background: #151719;
+            right: -200px;
+            transition: all 500ms linear;
+            cursor: pointer;
+            
+        }
+
+        
+        #sidebar.active{
+            right: 0px;
+        }
+
+        #sidebar ul li{
+            color: rgba(230,230,230,0.9);
+            list-style-type: none;
+            padding: 15px 10px;
+            border-bottom: 1px solid rgba(100,100,100,0.3);
+        }
+
+        #sidebar .toggle-btn{
+            position: absolute;
+            right: 230px;
+            top: 20px;
+        }
+        #sidebar .toggle-btn span{
+            display: block;
+            width: 30px;
+            height: 5px;
+            background: #000000;
+            margin: 3px;
+        }
+
+        .navigation {
         list-style-type: none;
         margin: 0;
         padding: 0;
         overflow: hidden;
         background: #333;
-      }
-      .list {
-        float: left;
-        border-right: 1px solid #bbb;
-      }
+        }
 
+      
       li a {
         display: block;
         color: white;
         text-align: center;
-        padding: 14px 16px;
+        padding: 14px ;
         /* background-color: grey; */
         text-decoration: none;
+        
+       }
+       li:hover:not(.active) {
+        background-color: rgba(95, 93, 93, 0.61);
       }
 
-      li a:hover:not(.active) {
-        background-color: #111;
+       .active {
+        background-color: #015828;
+    
       }
+    
 
-      .active {
-        background-color: #04aa6d;
-      }
+      
+
     </style>
-  </head>
-  <body>
-    <ul class="navigation">
-      <li class="list"><a href="proposal.html">Home</a></li>
-      <li class="list"><a class="active" href="history.html">History</a></li>
-      <li class="list"><a href="epoches.html">Architectural Epoches</a></li>
-      <li class="list">
-        <a href="german_real-estate.html">German Real Estate Market</a>
-      </li>
-      <li class="list">
-        <a href="us_real-estate.html">US Real Estate Market</a>
-      </li>
-      <li class="list"><a href="favorites.html">Favorite Estates</a></li>
+</head>
+<body>
+
+  <div id="sidebar">
+    <div class="toggle-btn" onclick="toggleSidebar()">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+    <ul>
+        <li><a  href="sidebar.html">Home</a></li>
+        <li> <a class="active" href="history.html">History</a> </li>
+        <li> <a href="architecture.html">Architecture</a> </li>
+        <li> <a href="favorites.html">Personal Favorites</a> </li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="sitemap.html">Sitemap</a></li>
     </ul>
-  </body>
+</div>
+
+
+
+
+    
+
+    <script>
+
+        function toggleSidebar(){
+            document.getElementById("sidebar").classList.toggle("active");
+        }
+    </script>
+    
+</body>
 </html>

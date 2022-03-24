@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      * {
+        margin: 0px;
+        padding: 0px;
+        font-family: sans-serif;
+      }
+
+      #pos {
+        text-align: center;
+      }
+
+      #sidebar {
+        position: fixed;
+        width: 200px;
+        height: 100%;
+        background: #151719;
+        right: -200px;
+        transition: all 500ms linear;
+        cursor: pointer;
+      }
+
+      #sidebar.active {
+        right: 0px;
+      }
+
+      #sidebar ul li {
+        color: rgba(230, 230, 230, 0.9);
+        list-style-type: none;
+        padding: 15px 10px;
+        border-bottom: 1px solid rgba(100, 100, 100, 0.3);
+      }
+
+      #sidebar .toggle-btn {
+        position: absolute;
+        right: 230px;
+        top: 20px;
+      }
+      #sidebar .toggle-btn span {
+        display: block;
+        width: 30px;
+        height: 5px;
+        background: #565656;
+        margin: 3px;
+      }
+
+      .navigation {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background: #333;
+      }
+
+      li a {
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 14px;
+        /* background-color: grey; */
+        text-decoration: none;
+      }
+      li:hover:not(.active) {
+        background-color: rgba(95, 93, 93, 0.61);
+      }
+
+      .active {
+        background-color: #015828;
+      }
+      body {
+        background-color: #efefef;
+      }
+
+      h1 {
+        color: #565656;
+        text-align: left;
+        padding-left: 2%;
+        text-decoration: underline #72dbf5;
+      }
+
+      hr {
+        background-color: #72dbf5;
+        height: 3px;
+        border: none;
+      }
+
+      h2 {
+        text-align: center;
+        color: #565656;
+      }
+
+      h5 {
+        margin: 1%;
+        float: left;
+        color: #565656;
+      }
+      h6 {
+        margin: 1%;
+        float: right;
+        color: #565656;
+      }
+
+      h2 {
+        float: center;
+        color: #565656;
+        color: #76323f;
+      }
+
+      h4 {
+        margin-left: 25%;
+        text-align: left;
+        margin-right: 25%;
+      }
+      p {
+        text-align: center;
+        margin-left: 25%;
+        margin-right: 25%;
+      }
+      img {
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="sidebar">
+      <div class="toggle-btn" onclick="toggleSidebar()">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a class="active" href="architecture.html">Architecture</a></li>
+        <li><a href="epoches.html">Epoches</a></li>
+        <li><a href="favorites.html">Personal Selection</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="sitemap.html">Sitemap</a></li>
+      </ul>
+    </div>
+
+    <br />
+
+    <div id="pos">
+      <h1>Architectural's Best</h1>
+      <br />
+      <!-- <hr /> -->
+    </div>
+
+    <br />
+    <h2>What is Architecture?</h2>
+    <br />
+
+    <p>
+      Often times, Architecture is described or associated with being the
+      profession of designing buildings, open areas, communities and other
+      artificial constructions and environments. Architecture often includes
+      design or selection of furnishings, and decorations, supervision of
+      construction work and the examination, restoration or remodelling of
+      existing buildings.
+      <br />
+      <br />
+
+      Architecture, other than construction, is the art and technique of
+      designing and building. The practice of architecture is employed in order
+      to fulfill both practical and expressive requirements and thus serves
+      utilitarian as well as aestetic ends.
+      <br />
+      <br />
+
+      Marcus Vitruvius, a great Roman architect and historian is cited as
+      follows: <br />
+      <em
+        >Architecture is a passion, a vocation, a calling — as well as a science
+        and a business. It has been described as a social art and also an artful
+        science. Architecture must be of the highest quality of design.</em
+      >
+    </p>
+
+    <br />
+    <br />
+    <h2>Famous Architects and their Work</h2>
+    <br />
+    <h4>1. Anton Gaudi - <em>La Segrada Familia</em></h4>
+    <br />
+    <p>
+      Gaudí spent his entire career in Barcelona, where he built all of his
+      projects, the most famous of which is the 1883 cathedral known as La
+      Sagrada Familia, still under construction today. His style was an ornate
+      mix of Baroque, Gothic, Moorish and Victorian elements that often featured
+      ornamental tile-work, and drew upon forms found in nature—an influence
+      that can he seen in the tree-like columns holding up the vast interior of
+      his church, as well as the undulating facade of another of his famous
+      creations, the apartment block known as the Casa Milla (inspired by the
+      multi-peaked mountain just outside of Barcelona called Montserrat).
+      Gaudí’s work would go on to have a tremendous impact on subsequent
+      generations of modernists.
+    </p>
+    <br />
+    <div>
+      <img src="images/lasegradaFamili.jpg" alt="" height="400px" />
+    </div>
+    <br />
+    <br />
+    <h4>2. Frank Lloyd Wright - <em>Falling Water</em></h4>
+    <br />
+    <p>
+      GA Wisconsin native, Wright revolutionize 20th-century architect, and his
+      midwestern upbringing played a crucial role in shaping his sensibility.
+      Inspired by the low-lying building that dotted the American plains, Wright
+      created the Prairie House style as a reaction the prevailing Victorian
+      aesthetic, which emphasized dark decor, and busy embellishments both
+      inside and out. In its stead, Wright employed clean geometries with an
+      emphasis on horizontal planes. His most famous building, Falling Water (a
+      residence in Bear Run, PA, designed for Pittsburg department store
+      magnate, Edgar Kaufmann in 1935) features stacked rectangular balconies
+      that seem to float over the natural waterfall incorporated into the house.
+    </p>
+    <br />
+
+    <div>
+      <img src="images/wright_fallinwaters.jpg" alt="" height="400px" />
+    </div>
+    <br />
+    <br />
+    <h4>3. Zaha Hadid - Heydar Aliyev Centre <em>La Segrada Familia</em></h4>
+    <br />
+    <p>
+      One of the few women to have risen to the level of starchitect—and the
+      first ever to win architecture’s version of the Oscar, the Pritzker
+      Prize—Zaha Hadid was known for futuristic designs that employed curving,
+      swooping lines more suitable for UFOs than buildings. Born into a wealthy
+      Iraqi family in Bagdad and educated in the U.K. (where the Queen would
+      later make her a Dame, the feminine form of address for knighthood) Hadid
+      threw out the rule-book, eschewing the linear geometry usually employed by
+      architects for an Expressionistic style that often appeared to allude to
+      the female form—though not intentionally, according the Hadid herself:
+      When her design for a stadium in Qatar was compared to a vagina, she
+      dismissed the comment as “embarrassing” and “ridiculous.” Though she built
+      extensively around the world, she has only on completed project—a luxury
+      condo in Chelsea—in New York City..
+    </p>
+    <br />
+
+    <div>
+      <img src="images/ZahaHadid.jpg" alt="" height="400px" />
+    </div>
+    <br />
+    <br />
+    <h4>4. Daniel Burnham - <em>Flatiron Buidling</em></h4>
+    <br />
+    <p>
+      Daniel Burnham was a Gilded Age architect, who, along with partner John
+      Wellborn Root, built what was called the first skyscraper in 1886: The
+      130-foot-high Montauk Building in Chicago. Burnham is best known for a
+      much taller Flatiron Building in NYC. He’s also remembered for overseeing
+      the design and construction of Chicago’s World’s Columbian Exposition of
+      1893, the fantastical fair that became enshrined in legend as The White
+      City.
+    </p>
+    <br />
+
+    <div>
+      <img src="images/FlatIron.jpg" alt="" height="400px" />
+    </div>
+    <br />
+    <br />
+    <h4>5. Tadao Ando - <em>Poly Grand Theatre</em></h4>
+    <br />
+    <p>
+      Tadao Ando’s architectural style is said to create a “haiku” effect,
+      emphasizing nothingness and empty space to represent the beauty of
+      simplicity. He favors designing complex spatial circulation while
+      maintaining the appearance of simplicity. A self-taught architect, he
+      keeps his Japanese culture and language in mind while he travels around
+      Europe for research. The simplicity of his architecture emphasizes the
+      concept of sensation and physical experiences, mainly influenced by
+      Japanese culture. The religious term Zen focuses on the concept of
+      simplicity and concentrates on inner feeling rather than outward
+      appearance. Zen influences in Ando’s work. In order to practice the idea
+      of simplicity, Ando’s architecture is mostly constructed with concrete,
+      providing a sense of cleanliness and weightlessness (even though concrete
+      is a heavy material) at the same time.
+    </p>
+    <br />
+
+    <div>
+      <img src="images/GrandPolyTheatre.jpg" alt="" height="400px" />
+    </div>
+    <br />
+    <br />
+
+    <br /><br /><br /><br /><br />
+
+    <script>
+      function toggleSidebar() {
+        document.getElementById("sidebar").classList.toggle("active");
+      }
+    </script>
+  </body>
+</html>
