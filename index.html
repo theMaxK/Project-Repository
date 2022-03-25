@@ -1,67 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Insights and facts about the world of Architecture">
-    <meta name="keywords" content="Architecture, Architectural's Best, World of Architecture, Architectural">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Insights and facts about the world of Architecture"
+    />
+    <meta
+      name="keywords"
+      content="Architecture, Architectural's Best, World of Architecture, Architectural"
+    />
     <title>Architectural's Best</title>
-    <link rel="icon" href="images/fav.png" type="image/x-icon">
+    <link rel="icon" href="images/fav.png" type="image/x-icon" />
 
     <style>
-        *{
-            margin: 0px;
-            padding: 0px;
-            font-family: sans-serif;
+      * {
+        margin: 0px;
+        padding: 0px;
+        font-family: sans-serif;
+      }
+      #sidebar {
+        position: fixed;
+        width: 200px;
+        height: 100%;
+        background: #151719;
+        right: -200px;
+        transition: all 500ms linear;
+        cursor: pointer;
+      }
 
-        }
-        #sidebar{
-            position: fixed; 
-            width: 200px;
-            height: 100%;
-            background: #151719;
-            right: -200px;
-            transition: all 500ms linear;
-            cursor: pointer;
-            
-        }
+      #sidebar.active {
+        right: 0px;
+      }
 
-        
-        #sidebar.active{
-            right: 0px;
-        }
+      #sidebar ul li {
+        color: rgba(230, 230, 230, 0.9);
+        list-style-type: none;
+        padding: 15px 10px;
+        border-bottom: 1px solid rgba(100, 100, 100, 0.3);
+      }
 
-        #sidebar ul li{
-            color: rgba(230,230,230,0.9);
-            list-style-type: none;
-            padding: 15px 10px;
-            border-bottom: 1px solid rgba(100,100,100,0.3);
-        }
+      #sidebar .toggle-btn {
+        position: absolute;
+        right: 230px;
+        top: 20px;
+      }
+      #sidebar .toggle-btn span {
+        display: block;
+        width: 30px;
+        height: 5px;
+        background: #ffffff;
+        margin: 3px;
+      }
 
-        #sidebar .toggle-btn{
-            position: absolute;
-            right: 230px;
-            top: 20px;
-        }
-        #sidebar .toggle-btn span{
-            display: block;
-            width: 30px;
-            height: 5px;
-            background: #ffffff;
-            margin: 3px;
-        }
+      /* by designing the index.html I used resources found on W3 schools to Homepage Design, Background Image, etc...  */
 
-       /* by designing the index.html I used resources found on W3 schools to Homepage Design, Background Image, etc...  */
-
-       body,
+      body,
       html {
         height: 100%;
         margin: 0;
         font-family: Arial, Helvetica, sans-serif;
       }
-
-      
 
       * {
         box-sizing: border-box;
@@ -103,22 +104,21 @@
 
       .active {
         background-color: #015828;
-    
       }
 
-      .center{
-          position: absolute;
-          top: 50%;
-          left: 50%;
-          transform: translate(-50%, -50%);
-          color: white;
-          font-family: sans-serif;
-          font-size: 30px;
+      .center {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: white;
+        font-family: sans-serif;
+        font-size: 30px;
       }
 
       .bg-text {
-        background-color: rgb(0,0,0); /* Fallback color */
-        background-color: rgba(0,0,0, 0.65); /* Black w/opacity/see-through */
+        background-color: rgb(0, 0, 0); /* Fallback color */
+        background-color: rgba(0, 0, 0, 0.65); /* Black w/opacity/see-through */
         color: white;
         font-weight: bold;
         font-size: 30px;
@@ -131,8 +131,8 @@
         width: 300px;
         padding: 20px;
         text-align: center;
-    }
-    .navigation {
+      }
+      .navigation {
         list-style-type: none;
         margin: 0;
         padding: 0;
@@ -140,41 +140,32 @@
         background: #333;
       }
 
-      
       li a {
         display: block;
         color: white;
         text-align: center;
-        padding: 14px ;
+        padding: 14px;
         /* background-color: grey; */
         text-decoration: none;
-        
       }
-    
-     
     </style>
-</head>
-<body>
-
+  </head>
+  <body>
     <div id="sidebar">
-        <div class="toggle-btn" onclick="toggleSidebar()">
-            <span></span>
-            <span></span>
-            <span></span>
-        
-        </div>
-        <ul>
-            <li class="list"> <a class="active" href="index.html">Home</a></li>
-            <li> <a href="architecture.html">Architecture</a> </li>
-            <li> <a href="epoches.html">Epoches</a> </li>
-            <li> <a href="favorites.html">Personal Selection</a> </li>
-            <li><a href="contact.html">Contact</a></li>
-            <li><a href="sitemap.html">Sitemap</a></li>
-        </ul>
+      <div class="toggle-btn" onclick="toggleSidebar()">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <ul>
+        <li class="list"><a class="active" href="index.html">Home</a></li>
+        <li><a href="architecture.html">Architecture</a></li>
+        <li><a href="epoches.html">Epoches</a></li>
+        <li><a href="favorites.html">Personal Selection</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="sitemap.html">Sitemap</a></li>
+      </ul>
     </div>
-
-
-
 
     <div class="bg-image img2"></div>
     <!-- <div class="bg-image img2"></div> -->
@@ -186,11 +177,9 @@
     <div class="bg-text">Architectural's Best</div>
 
     <script>
-
-        function toggleSidebar(){
-            document.getElementById("sidebar").classList.toggle("active");
-        }
+      function toggleSidebar() {
+        document.getElementById("sidebar").classList.toggle("active");
+      }
     </script>
-    
-</body>
+  </body>
 </html>
