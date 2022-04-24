@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Insights and facts about the world of Architecture"
+    />
+    <meta
+      name="keywords"
+      content="Architecture, Architectural's Best, World of Architecture, Architectural"
+    />
+    <title>Architectural's Best</title>
+    <link rel="icon" href="images/fav.png" type="image/x-icon" />
+    <style>
+        * {
+          margin: 0px;
+          padding: 0px;
+          font-family: sans-serif;
+        }
+  
+        #pos {
+          text-align: center;
+        }
+  
+        #sidebar {
+          position: fixed;
+          width: 200px;
+          height: 100%;
+          background: #151719;
+          right: -200px;
+          transition: all 500ms linear;
+          cursor: pointer;
+        }
+  
+        #sidebar.active {
+          right: 0px;
+        }
+  
+        #sidebar ul li {
+          color: rgba(230, 230, 230, 0.9);
+          list-style-type: none;
+          padding: 15px 10px;
+          border-bottom: 1px solid rgba(100, 100, 100, 0.3);
+        }
+  
+        #sidebar .toggle-btn {
+          position: absolute;
+          right: 230px;
+          top: 20px;
+        }
+        #sidebar .toggle-btn span {
+          display: block;
+          width: 30px;
+          height: 5px;
+          background: #565656;
+          margin: 3px;
+        }
+  
+        .navigation {
+          list-style-type: none;
+          margin: 0;
+          padding: 0;
+          overflow: hidden;
+          background: #333;
+        }
+  
+        li a {
+          display: block;
+          color: white;
+          text-align: center;
+          padding: 14px;
+          /* background-color: grey; */
+          text-decoration: none;
+        }
+        li:hover:not(.active) {
+          background-color: rgba(95, 93, 93, 0.61);
+        }
+  
+        .active {
+          background-color: #015828;
+        }
+        body {
+          background-color: #efefef;
+        }
+  
+        h1 {
+          color: #565656;
+          text-align: left;
+          padding-left: 2%;
+          text-decoration: underline #72dbf5;
+        }
+  
+        hr {
+          background-color: #72dbf5;
+          height: 3px;
+          border: none;
+        }
+  
+        h3 {
+          text-align: center;
+          color: #565656;
+        }
+  
+        h5 {
+          margin: 1%;
+          float: left;
+          color: #565656;
+        }
+        h6 {
+          margin: 1%;
+          float: right;
+          color: #565656;
+        }
+  
+        h2 {
+          text-align: center;
+          color: #565656;
+          color: #76323f;
+        }
+  
+        h4 {
+          margin-left: 25%;
+          text-align: left;
+          margin-right: 25%;
+        }
+        p {
+          text-align: center;
+          margin-left: 25%;
+          margin-right: 25%;
+        }
+        img {
+          margin-left: auto;
+          margin-right: auto;
+          display: block;
+        }
+  
+        .video_class {
+          text-align: center;
+          display: block;
+          margin-left: auto;
+          margin-right: auto;
+        }
+      </style>
+</head>
+<body>
+    <div id="sidebar">
+        <div class="toggle-btn" onclick="toggleSidebar()">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a class="active" href="what.html">About</a></li>
+          <li><a href="architecture.html">Architecture</a></li>
+          <li><a href="epoches.html">Epoches</a></li>
+          <li><a href="favorites.html">Personal Selection</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="sitemap.html">Sitemap</a></li>
+        </ul>
+      </div>
+  
+      <br />
+  
+      <div id="pos">
+        <h1>Architectural's Best</h1>
+        <br />
+        <!-- <hr /> -->
+      </div>
+  
+      <br />
+      <h2>What is Architecture?</h2>
+      <br />
+  
+      <p>
+        Often times, Architecture is described or associated with being the
+        profession of designing buildings, open areas, communities and other
+        artificial constructions and environments. Architecture often includes
+        design or selection of furnishings, and decorations, supervision of
+        construction work and the examination, restoration or remodelling of
+        existing buildings.
+        <br />
+        <br />
+  
+        Architecture, other than construction, is the art and technique of
+        designing and building. The practice of architecture is employed in order
+        to fulfill both practical and expressive requirements and thus serves
+        utilitarian as well as aestetic ends.
+    
+</body>
+</html>
