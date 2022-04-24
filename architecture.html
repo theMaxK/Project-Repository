@@ -92,6 +92,13 @@
         padding-left: 2%;
         text-decoration: underline #72dbf5;
       }
+      a{
+        color: #565656;
+        text-align: left;
+        padding-left: 2%;
+        text-decoration: underline #72dbf5;
+
+      }
 
       hr {
         background-color: #72dbf5;
@@ -159,43 +166,14 @@
     <br />
 
     <div id="pos">
-      <h1>Architectural's Best</h1>
+      <h1><a href="index.html">Architectural's Best</a></h1>
       <br />
       <!-- <hr /> -->
     </div>
 
     <br />
-    <h2>What is Architecture?</h2>
-    <br />
-
-    <p>
-      Often times, Architecture is described or associated with being the
-      profession of designing buildings, open areas, communities and other
-      artificial constructions and environments. Architecture often includes
-      design or selection of furnishings, and decorations, supervision of
-      construction work and the examination, restoration or remodelling of
-      existing buildings.
-      <br />
-      <br />
-
-      Architecture, other than construction, is the art and technique of
-      designing and building. The practice of architecture is employed in order
-      to fulfill both practical and expressive requirements and thus serves
-      utilitarian as well as aestetic ends.
-      <br />
-      <br />
-
-      Marcus Vitruvius, a great Roman architect and historian is cited as
-      follows: <br />
-      <em
-        >Architecture is a passion, a vocation, a calling — as well as a science
-        and a business. It has been described as a social art and also an artful
-        science. Architecture must be of the highest quality of design.</em
-      >
-    </p>
-
-    <br />
-    <br />
+   
+    
     <h2>Famous Architects and their Work</h2>
     <br />
     <h4>1. Anton Gaudi - <em>La Segrada Familia</em></h4>
@@ -220,6 +198,7 @@
         alt="La Segrada Familia"
         title="La Segrada Familia"
         height="400px"
+        id="segrada"
       />
     </div>
     <br />
@@ -246,6 +225,7 @@
         alt="Fallin Water Estate"
         title="Fallin Water Estate"
         height="400px"
+        id="fallin"
       />
     </div>
     <br />
@@ -275,6 +255,7 @@
         alt="Heydar Aliyev Centre"
         title="Heydar Aliyev Centre"
         height="400px"
+        id="heydar"
       />
     </div>
     <br />
@@ -298,6 +279,7 @@
         alt="Flatiron"
         title="Flatiron Building"
         height="400px"
+        id="flatiron"
       />
     </div>
     <br />
@@ -327,6 +309,7 @@
         alt="Poly Grand Theatre"
         title="Poly Grand Theatre"
         height="400px"
+        id="poly"
       />
     </div>
     <br />
@@ -338,6 +321,53 @@
       function toggleSidebar() {
         document.getElementById("sidebar").classList.toggle("active");
       }
+      function segrada(){
+        console.log('...starting mouseover function...')
+        document.getElementById('segrada').src = 'images/laSegradaFamilia.jpg'
+      }
+      function fallinin(){
+        console.log('...starting mouseout function...')
+        document.getElementById('fallin').src = 'images/fallinWaters.jpg'
+
+      }
+      function fallinout(){
+        console.log('...starting mouseout function...')
+        document.getElementById('fallin').src = 'images/wright_fallinwaters.jpg'
+      }
+
+      function hadidin(){
+        console.log('...starting mouseout function...')
+        document.getElementById('heydar').src = 'images/hadid.jpg'
+      }
+
+      function flat(){
+        console.log('...starting mouseout function...')
+        document.getElementById('flatiron').src = 'images/flat.jpg'
+      }
+      function flatout(){
+        console.log('...starting mouseout function...')
+        document.getElementById('flatiron').src = 'images/Flatiron.jpg'
+      }
+      
+      document.getElementById('segrada').onmouseout = function(){
+        segrada()
+      }
+      document.getElementById('fallin').onmouseout = function(){
+        fallinout()
+      }
+      document.getElementById('fallin').onmouseover = function(){
+        fallinin()
+      }
+      document.getElementById('heydar').onmouseout = function(){
+        hadidin()
+      }
+      document.getElementById('flatiron').onmouseover = function(){
+        flat()
+      }
+      document.getElementById('flatiron').onmouseout = function(){
+        flatout()
+      }
+     
     </script>
   </body>
 </html>

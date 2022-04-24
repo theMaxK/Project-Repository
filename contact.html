@@ -86,6 +86,13 @@
         padding-left: 2%;
         text-decoration: underline #72dbf5;
       }
+      a{
+        color: #565656;
+        text-align: left;
+        padding-left: 2%;
+        text-decoration: underline #72dbf5;
+
+      }
 
       hr {
         background-color: #72dbf5;
@@ -144,6 +151,8 @@
         width: auto;
       }
 
+      
+
     </style>
   </head>
   <body>
@@ -167,16 +176,23 @@
     <br />
 
     <div id="pos">
-      <h1 >Architectural's Best<a id="#contact_form"></a></h1>
+      <h1><a href="index.html">Architectural's Best</a></h1>
+
+      <!-- <h1 >Architectural's Best<a id="#contact_form"></a></h1> -->
       <br />
       <!-- <hr /> -->
     </div>
 
     <h2 class="font_type">Contact Information</h2>
+    <br>
     <form method="post" action="https://oim-apis.herokuapp.com/form">
     <fieldset>
       <legend><h4>Your Information:</h4></legend>
+      <br>
       <label for="name">Name: </label>
+      
+     
+      
       <input
         type="text"
         id="name"
@@ -184,6 +200,7 @@
         maxlength="100"
         placeholder="Enter your name here"
       />
+      <p id="name_p"></p>
       <br>
       <br>
       <label for="email"> Email: </label>
@@ -192,11 +209,15 @@
         name="email"
         maxlength="100"
         placeholder="Enter your email here" />
+      <p id="email_p"></p>
       <br>
       <br>
     </fieldset>
+    <br>
+    <br>
     <fieldset>
         <legend> <h4>Your Review:</h4></legend>
+        <br>
         <label for="apple-product">Which site did you like most?</label>
         <select name="site" id="best-site">
             <option value="Home">Home</option>
@@ -238,14 +259,46 @@
             <label for="updates">Sign me up for email updates</label>
         </div>
         <br>
-        <input type="submit" value="Submit">
+        <input type="submit" value="Submit" id="submit">
         <input type="Reset" value="Reset">
+        <br>
+        <br>
     </form>
 
     <script>
       function toggleSidebar() {
         document.getElementById("sidebar").classList.toggle("active");
       }
+
+      function validate(){
+        console.log('...starting validate function...')
+        const name = document.getElementById('name').value 
+        const email = document.getElementById('email').value 
+        console.log(name)
+        console.log(email)
+        if (isNaN(name)== true){
+          document.getElementById('name_p').innerText = ""
+        } 
+        else if (isNaN(name)== false){
+          document.getElementById('name_p').innerText = "Name input not correct"
+        } 
+        if (name== ''){
+          document.getElementById('name_p').innerText = "Name input is empty"
+        }
+        if (isNaN(email)== true){
+          document.getElementById('email_p').innerText = ""
+        } 
+        else if (isNaN(email)== false){
+          document.getElementById('email_p').innerText = "Email input not correct"
+        }
+        if (email== ''){
+          document.getElementById('email_p').innerText = "Email input is empty"
+        }
+
+      }
+      document.getElementById('name').addEventListener('focusout', validate)
+      document.getElementById('email').addEventListener('focusout', validate)
+
     </script>
   </body>
 </html>
