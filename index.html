@@ -86,13 +86,13 @@
         background-image: url("images/woolf_haxton-goldstein_front.jpg");
       }
       .img3 {
-        background-image: url("images/considered-the-largest-of-frank-lloyd-wrights-experimental-textile-block-houses-in-los-angeles-the-ennis-house-comprises-over-27000-concrete-blocks-stacked-atop-a-concrete-platform.jpg");
+        background-image: url("images/goldstein-2.jpg");
       }
       .img4 {
-        background-image: url("images/chateau-margaux-459568_1280.jpg");
+        background-image: url("images/goldstein-3.jpg");
       }
       .img5 {
-        background-image: url("images/lakeComo.jpg");
+        background-image: url("images/goldstein-4.jpg");
       }
       .img6 {
         background-image: url("images/FrankLloydWright.jpg");
@@ -168,9 +168,10 @@
       </ul>
     </div>
 
-    <img src="" alt="" id="goldstein" />
+    <!-- <div id="goldstein" src=""></div> -->
+    <!-- <img src="" alt="" id="goldstein" /> -->
 
-    <!-- <div class="bg-image img2"></div> -->
+    <div class="bg-image img2" id="goldstein"></div>
     <!-- <div class="bg-image img2"></div> -->
     <!-- <div class="bg-image img3"></div>
     <div class="bg-image img4"></div>
@@ -184,21 +185,28 @@
         document.getElementById("sidebar").classList.toggle("active");
       }
 
+      // const slides = [
+      //   "images/woolf_haxton-goldstein_front.jpg",
+      //   "images/goldstein-2.jpg",
+      //   "images/goldstein-3.jpg",
+      //   "images/goldstein-4.jpg",
+      // ];
       const slides = [
-        "images/woolf_haxton-goldstein_front.jpg",
-        "images/goldstein-2.jpg",
-        "images/goldstein-3.jpg",
-        "images/goldstein-4.jpg",
+        "bg-image img2",
+        "bg-image img3",
+        "bg-image img4",
+        "bg-image img5",
       ];
+
       let i = 0;
 
       function slideShow() {
         console.log("...starting slideShow function...");
-        let tigerImage = document.getElementById("goldstein");
+        let Image = document.getElementById("goldstein");
         if (i == slides.length) {
           i = 0;
         }
-        tigerImage.src = slides[i];
+        Image.className = slides[i];
 
         i++;
         setTimeout(slideShow, 5000);
